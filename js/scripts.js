@@ -20,5 +20,17 @@ $(document).ready(function() {
     });
   });
 
-  
+  $("button#bark").click(function() {
+    $("ul#meow-text").prepend("<li>meow!</li>");
+    $("li").click(function() {
+      $(this).remove();
+    });
+  });
+
+  $("button#meow").click(function() {
+    $("ul#bark-text").prepend("<li>bark!</li>");
+    $("li").click(function() {
+      $(this).remove();
+    });
+  });
 });
