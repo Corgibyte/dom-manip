@@ -22,8 +22,11 @@ $(document).ready(function() {
 
   $("button#bark").click(function() {
     $("ul#meow-text").prepend("<li>meow!</li>");
-    $("li").click(function() {
-      $(this).remove();
+    $("li").first().click(function() {
+      $(this).after('<img src="img/pic.jpg"></img>');
+      $("img").click(function() {
+        $(this).remove();
+      });
     });
   });
 
